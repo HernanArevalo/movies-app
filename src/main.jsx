@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { MovieComponent } from './movies/components/MovieComponent'
+import { MoviePage } from './pages/MoviePage'
 import './styles.css'
+import 'animate.css';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
-    <MovieComponent />
+    <MoviePage />
   // </React.StrictMode>
 )
