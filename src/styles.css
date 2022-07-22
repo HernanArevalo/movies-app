@@ -1,11 +1,19 @@
 body{
     background-color: #111;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Aktifo-B;
     padding: 0;
     margin: 0;
+
+
   }
   
-img{
-    width: 100%;
+@font-face {
+  font-family: Aktifo-B-Black;
+  src: url('./assets/fonts/Aktifo-B-Black');
 }
+
+@font-face {
+  font-family: Aktifo-B-Bold;
+  src: url('./assets/fonts/Aktifo-B-Bold');
+}
+

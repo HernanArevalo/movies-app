@@ -1,0 +1,103 @@
+body{
+    overflow: hidden;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h4{
+    font-weight: black;
+}
+.main-container{
+    background-size: 100%;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.upper-container{
+    background-color: rgba(127, 255, 212, 0.5);  
+    height: 91vh;
+    display: flex;
+    align-items: stretch;
+}
+
+.tagline-container{
+    flex-grow: 7;
+}
+.info-container{
+    background-color: rgba(0, 100, 0, 0.5);
+    width: 50%;
+    flex-basis:590px
+}
+
+.info-container > div{
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+
+}
+.title{
+    height: 23%;
+    background-color: rgba(165, 42, 42, 0.5);
+    font-size: 40px;
+    text-align: right;
+    font-family: Aktifo-B;
+}
+
+.year-genders{
+    height: 6%;
+    text-align: right;
+
+}
+
+.story-container{
+    height: 27%;
+    background-color: rgba(137, 43, 226, 0.5);
+
+}
+
+.story-title{
+    width: 134px;
+    word-spacing: 100vw;
+
+}
+.story{
+    width: 100%;
+}
+
+.directing{
+    height: 6%;
+
+}
+
+.directing-title{
+    word-spacing: 100vw;
+    width: 134px;
+}
+
+
+
+
+.poster-img{
+    height: 250px;
+}
+
+.main-container > footer{
+        background-color: rgba(139, 0, 0, 0.5);
+        height: 9vh;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: pre-wrap;
+    
+}
