@@ -35,53 +35,44 @@ h4{
 }
 .info-container{
     background-color: rgba(0, 100, 0, 0.5);
-    width: 50%;
-    flex-basis:590px
+    width: 600px;
+    display: grid;
+    grid-template-columns: 135px auto;
+    grid-template-rows: 195px 50px 230px 50px auto;
+    
+}
+.info-container> div{
+    padding: 20px;
+    border: 1px solid black;
 }
 
-.info-container > div{
-    display: flex;
-    align-items: center;
-    padding-right: 30px;
 
-}
+
 .title{
-    height: 23%;
-    background-color: rgba(165, 42, 42, 0.5);
-    font-size: 40px;
+    grid-column: 1 / 3;
     text-align: right;
-    font-family: Aktifo-B;
-}
+    font-size: 50px;
 
+}
 .year-genders{
-    height: 6%;
+    grid-column: 1 / 3;
     text-align: right;
 
 }
-
-.story-container{
-    height: 27%;
-    background-color: rgba(137, 43, 226, 0.5);
-
-}
-
 .story-title{
-    width: 134px;
-    word-spacing: 100vw;
-
+    grid-column: 1;
 }
 .story{
-    width: 100%;
+    grid-column: 2;
 }
-
-.directing{
-    height: 6%;
-
-}
-
 .directing-title{
-    word-spacing: 100vw;
-    width: 134px;
+    grid-column: 1;
+}
+.directing{
+    grid-column: 2;
+}
+.poster-container{
+    grid-column: 2;
 }
 
 

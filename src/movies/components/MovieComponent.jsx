@@ -34,37 +34,33 @@ export const MovieComponent = () => {
                     <div className="year-genders">
                         <span>2019 | Suspense, Drama</span>
                     </div>
-                    <div className="story-container">
-                        <div className="story-title">
-                            <h4>The Story</h4>
-                        </div>
-                        <div className="story">
-                            <p> 
-                                Decades after Sarah Connor prevented 
-                                Judgment Day,  a lethal new Terminator is 
-                                sent to eliminate the future leader of the 
-                                resistance. In a fight to save mankind,  
-                                battle-hardened Sarah Connor teams up 
-                                with an unexpected ally and an enhanced 
-                                super soldier to stop the deadliest 
-                                Terminator yet.
-                            </p>
+                    <div className="story-title">
+                        <h4>The Story</h4>
+                    </div>
+                    <div className="story">
+                        <p> 
+                            Decades after Sarah Connor prevented 
+                            Judgment Day,  a lethal new Terminator is 
+                            sent to eliminate the future leader of the 
+                            resistance. In a fight to save mankind,  
+                            battle-hardened Sarah Connor teams up 
+                            with an unexpected ally and an enhanced 
+                            super soldier to stop the deadliest 
+                            Terminator yet.
+                        </p>
 
-                        </div>
                     </div>
 
-                    <div className="directing">
 
-                        <div className="directing-title">
-                            <h4>Directing</h4> 
-                        </div>
-                        <div className="directing-content">
-                            <p> 
-                                Tim Miller
-                            </p>
-                        </div>
-
+                    <div className="directing-title">
+                        <h4>Directing</h4> 
                     </div>
+                    <div className="directing-content">
+                        <p> 
+                            Tim Miller
+                        </p>
+                    </div>
+
                     <div className="poster-container">
                         <img src={posterImg} alt="" className="poster-img"/>
                     </div>
