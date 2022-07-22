@@ -3,17 +3,7 @@ import './MoviePage.css'
 
 export const MoviePage = () => {
     
-
-    const backdropPath = '/a6cDxdwaQIFjSkXf7uskg78ZyTq.jpg'
-    const backgroundImg = `https://image.tmdb.org/t/p/original${backdropPath}`
-    
-    const posterPath = '/k7PuHoj2oE7nEHExwliF2FSXFnr.jpg'
-    const posterImg = `https://image.tmdb.org/t/p/original${posterPath}`
-    
-
-
-    const movie = useFetchMovie( 11 )
-    console.log( movie )
+    const movie = useFetchMovie( 11631 )
     
     return (
     <>
@@ -23,7 +13,7 @@ export const MoviePage = () => {
                 <div className="upper-container">
 
                     <div className="tagline-container animate__animated animate__fadeInLeft">
-                        <p>{ movie.tagline}</p>
+                        <p>{ movie?.tagline }</p>
                     </div>
 
                     <div className="info-container animate__animated animate__fadeInRight">
@@ -31,14 +21,14 @@ export const MoviePage = () => {
                             <h3>{ movie.title?.toUpperCase() }</h3>
                         </div>
                         <div className="year-genders animate__animated animate__fadeInRight">
-                            <span>{movie.year}     |     Suspense, Drama</span>
+                            <span>{ movie.year }     |     Suspense, Drama</span>
                         </div>
                         <div className="story-title">
                             <h4>The Story</h4>
                         </div>
                         <div className="story animate__animated animate__fadeInRight">
                             <p> 
-                                {movie.story}
+                                { movie.story }
                             </p>
 
                         </div>
@@ -49,12 +39,12 @@ export const MoviePage = () => {
                         </div>
                         <div className="directing-content animate__animated animate__fadeInRight">
                             <p> 
-                                Tim Miller
+                                { movie.director }
                             </p>
                         </div>
 
                         <div className="poster-container animate__animated animate__fadeInRight">
-                            <img src={movie.poster} alt="" className="poster-img"/>
+                            <img src={ movie.poster } alt="" className="poster-img"/>
                         </div>
 
                     </div>
@@ -62,7 +52,7 @@ export const MoviePage = () => {
                 </div>
 
                 <footer className="animate__animated animate__fadeInUp">
-                Linda Hamilton     |     Arnold Schwarzenegger     |     Mackenzie Davis
+                {movie.actors}     |     Arnold Schwarzenegger     |     Mackenzie Davis
                 </footer>
             </div>
 
