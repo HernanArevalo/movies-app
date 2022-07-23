@@ -12,16 +12,21 @@ export const getMovie = async( id = 290859 ) => {
     const actors = [ creditsData.cast[0].name, creditsData.cast[1].name, creditsData.cast[2].name ]
     const director = creditsData.crew.filter( member => member.known_for_department == "Directing")[0].name
 
+    const genres = [ movieData.genres[0].name, movieData.genres[1].name]
+
 
     const movie = { id: movieData.id,
                     backdrop: `https://image.tmdb.org/t/p/original${movieData.backdrop_path}`,
                     poster: `https://image.tmdb.org/t/p/original${movieData.poster_path}`,
-                    genres: movieData.genres,
+                    genre1: genres[0],
+                    genre2: genres[1],
                     title: movieData.original_title,
                     story: movieData.overview,
                     tagline: movieData.tagline,
                     year: (movieData.release_date).slice(0,4),
-                    actors: actors,
+                    actor1: actors[0],
+                    actor2: actors[1],
+                    actor3: actors[2],
                     director: director,
                 }
 

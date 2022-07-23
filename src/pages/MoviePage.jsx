@@ -3,7 +3,7 @@ import './MoviePage.css'
 
 export const MoviePage = () => {
     
-    const movie = useFetchMovie( 11631 )
+    const movie = useFetchMovie( 1895 )
     
     return (
     <>
@@ -12,39 +12,46 @@ export const MoviePage = () => {
             <div className="main-container"> 
                 <div className="upper-container">
 
-                    <div className="tagline-container animate__animated animate__fadeInLeft">
+                    <div className="tagline-container animate__animated animate__slideInLeft">
                         <p>{ movie?.tagline }</p>
                     </div>
 
                     <div className="info-container animate__animated animate__fadeInRight">
+
                         <div className="title">
                             <h3>{ movie.title?.toUpperCase() }</h3>
                         </div>
-                        <div className="year-genders animate__animated animate__fadeInRight">
-                            <span>{ movie.year }     |     Suspense, Drama</span>
-                        </div>
-                        <div className="story-title">
-                            <h4>The Story</h4>
-                        </div>
-                        <div className="story animate__animated animate__fadeInRight">
-                            <p> 
-                                { movie.story }
-                            </p>
 
-                        </div>
+                        <div className="info-container">
+                            <div className="year-genders animate__animated animate__fadeInRight">
+                                <span>{ movie.year }     |     {movie.genre1}, {movie.genre2}</span>
+                            </div>
+                            <div className="story-title">
+                                <h4>The Story</h4>
+                            </div>
+                            <div className="story animate__animated animate__fadeInRight">
+                                <p> 
+                                    { movie.story }
+                                </p>
+
+                            </div>
 
 
-                        <div className="directing-title">
-                            <h4>Directing</h4> 
-                        </div>
-                        <div className="directing-content animate__animated animate__fadeInRight">
-                            <p> 
-                                { movie.director }
-                            </p>
-                        </div>
+                            <div className="directing-title">
+                                <h4>Directing</h4> 
+                            </div>
+                            <div className="directing-content animate__animated animate__fadeInRight">
+                                <p> 
+                                    { movie.director }
+                                </p>
+                            </div>
 
-                        <div className="poster-container animate__animated animate__fadeInRight">
-                            <img src={ movie.poster } alt="" className="poster-img"/>
+                            <div className="poster-container animate__animated animate__fadeInRight">
+                                <img src={ movie.poster } alt="" className="poster-img"/>
+                            </div>
+
+
+
                         </div>
 
                     </div>
@@ -52,7 +59,7 @@ export const MoviePage = () => {
                 </div>
 
                 <footer className="animate__animated animate__fadeInUp">
-                {movie.actors}     |     Arnold Schwarzenegger     |     Mackenzie Davis
+                {movie.actor1}          |          {movie.actor2}          |          {movie.actor3}
                 </footer>
             </div>
 
@@ -64,3 +71,10 @@ export const MoviePage = () => {
 
   )
 }
+
+// ? 
+// ? COSAS PARA CAMBIAR
+// ? 
+// ? 1- Titulo. Sacarlo del grid y corregir margenes
+// ? 2- Géneros de las peliculas separados
+// ? 3- Actores separados
