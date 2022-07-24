@@ -20,7 +20,7 @@ export const getMovie = async( id = 290859 ) => {
                     poster: `https://image.tmdb.org/t/p/original${movieData.poster_path}`,
                     genre1: genres[0],
                     genre2: genres[1],
-                    title: movieData.original_title,
+                    title: movieData.title,
                     story: movieData.overview,
                     tagline: movieData.tagline,
                     year: (movieData.release_date).slice(0,4),

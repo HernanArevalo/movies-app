@@ -18,11 +18,20 @@ body{
     height: 100vh;
     width: 100vw;
     background-size: 100%;
-
+    
 }
 .main-container{
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,0) 60%, rgba(0,0,0,0.5) 70%);
+    pointer-events: none;
+    
+    background: linear-gradient(90deg, rgba(2,0,36,0) 20%, rgba(0,0,0,0.7) 35%);
+    background-size: 200% 100%;
+    background-position: 0% 0;
+    transition: background-position 1s;
+}
+
+
+.main-container:hover {
+    background-position: 100% 0%;
 
 }
 
@@ -30,51 +39,63 @@ body{
 .upper-container{
     height: 91vh;
     display: flex;
-    align-items: stretch;
+    display: grid;
+    grid-template-rows: 250px auto;
+    grid-template-columns: auto 600px;
+    padding: 0px 30px;
 }
 
 .tagline-container{
     flex-grow: 7;
-    margin-left: 40px;
-    margin-top: 40px;
     font-size: 35px;
     position: relative;
+    grid-row: 2;
+    grid-column: 1;
+
 }
+
 .tagline-container p{
-    position: absolute;
+    position: relative;
     bottom: 0;
     margin-bottom: 60px;
-    color: white;
+    color: rgb(255, 255, 255);
+    
 }
 
-.right-container{
-    display: grid;
-    grid-template-columns: 135px auto;
-    grid-template-rows: 195px 50px auto 50px auto;
 
-
-}
 .info-container{
     width: 600px;
     margin-right: 30px;
+    grid-row: 2;
+    grid-column: 2;
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 135px auto;
+    grid-template-rows: 50px auto 50px auto;
+    pointer-events: auto;
+
 
 }
 
-.info-container> div{
+.info-container > div{
     padding: 20px;
 }
 
 
 
 .title{
-    grid-column: 1 / 3;
     font-size: 50px;
     display: flex;
     align-items: center;
     justify-content: right;
     padding-top: 20px;
-    height: 300px;
+    grid-row: 1;
+    grid-column: 1 / 3;
+    padding-left: 50%;
+    pointer-events: auto;
+
 }
+
 .year-genders{
     grid-column: 1 / 3;
     text-align: right;
@@ -116,5 +137,9 @@ body{
     white-space: pre-wrap;
     background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(0,0,0,0.6) 60%);
+    pointer-events: auto;
 
     }
+
+
+

@@ -3,7 +3,7 @@ import './MoviePage.css'
 
 export const MoviePage = () => {
     
-    const movie = useFetchMovie( 1895 )
+    const movie = useFetchMovie( 25376 )
     
     return (
     <>
@@ -12,17 +12,16 @@ export const MoviePage = () => {
             <div className="main-container"> 
                 <div className="upper-container">
 
+                    <div className="title animate__animated animate__fadeInRight">
+                        <h3>{ movie.title?.toUpperCase() }</h3>
+                    </div>
+
                     <div className="tagline-container animate__animated animate__slideInLeft">
                         <p>{ movie?.tagline }</p>
                     </div>
 
                     <div className="info-container animate__animated animate__fadeInRight">
 
-                        <div className="title">
-                            <h3>{ movie.title?.toUpperCase() }</h3>
-                        </div>
-
-                        <div className="info-container">
                             <div className="year-genders animate__animated animate__fadeInRight">
                                 <span>{ movie.year }     |     {movie.genre1}, {movie.genre2}</span>
                             </div>
@@ -49,10 +48,6 @@ export const MoviePage = () => {
                             <div className="poster-container animate__animated animate__fadeInRight">
                                 <img src={ movie.poster } alt="" className="poster-img"/>
                             </div>
-
-
-
-                        </div>
 
                     </div>
 
