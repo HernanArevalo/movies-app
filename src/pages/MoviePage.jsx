@@ -3,22 +3,37 @@ import './MoviePage.css'
 
 export const MoviePage = () => {
     
-    const movie = useFetchMovie( 25376 )
+    const movie = useFetchMovie(  )
     
+    const mainContainer = document.querySelector('.main-container')
+    const infoContainer = document.querySelector('.info-container')
+    const taglineHTML = document.querySelector('.tagline-container p')
+
+
+    console.log( mainContainer )
+    console.log( taglineHTML )
+
+    if (infoContainer != null){
+        infoContainer.addEventListener('mouseover', ()=>{
+            console.log('asdasd');
+        
+        } )    
+
+    }
+
     return (
     <>
         <div className="container" style={ { backgroundImage: `url(${movie.backdrop})`} }>
 
             <div className="main-container"> 
+
+                
                 <div className="upper-container">
 
                     <div className="title animate__animated animate__fadeInRight">
                         <h3>{ movie.title?.toUpperCase() }</h3>
                     </div>
 
-                    <div className="tagline-container animate__animated animate__slideInLeft">
-                        <p>{ movie?.tagline }</p>
-                    </div>
 
                     <div className="info-container animate__animated animate__fadeInRight">
 
@@ -47,11 +62,18 @@ export const MoviePage = () => {
 
                             <div className="poster-container animate__animated animate__fadeInRight">
                                 <img src={ movie.poster } alt="" className="poster-img"/>
+                                
                             </div>
 
                     </div>
 
                 </div>
+
+                <div className="tagline-container animate__animated animate__slideInLeft">
+                    <h4>{ movie?.tagline }</h4>
+                </div>
+
+
 
                 <footer className="animate__animated animate__fadeInUp">
                 {movie.actor1}          |          {movie.actor2}          |          {movie.actor3}
