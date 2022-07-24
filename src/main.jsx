@@ -1,12 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { MoviePage } from './pages/MoviePage'
+import { BrowserRouter } from "react-router-dom";
+
 import './styles.css'
 import 'animate.css';
+import { MoviesRoutes } from './routes/MoviesRoutes';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
-    <MoviePage />
+    <BrowserRouter>
+      <MoviesRoutes />
+    </BrowserRouter>
   // </React.StrictMode>
 )

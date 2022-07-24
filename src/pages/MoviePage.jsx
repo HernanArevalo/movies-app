@@ -5,22 +5,6 @@ export const MoviePage = () => {
     
     const movie = useFetchMovie(  )
     
-    const mainContainer = document.querySelector('.main-container')
-    const infoContainer = document.querySelector('.info-container')
-    const taglineHTML = document.querySelector('.tagline-container p')
-
-
-    console.log( mainContainer )
-    console.log( taglineHTML )
-
-    if (infoContainer != null){
-        infoContainer.addEventListener('mouseover', ()=>{
-            console.log('asdasd');
-        
-        } )    
-
-    }
-
     return (
     <>
         <div className="container" style={ { backgroundImage: `url(${movie.backdrop})`} }>
