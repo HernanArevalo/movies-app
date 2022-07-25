@@ -1,10 +1,17 @@
+import { Fragment, useState } from 'react'
 import { useFetchMovie } from "../hooks/useFetchMovie"
 import './MoviePage.css'
 
 export const MoviePage = () => {
     
-    const movie = useFetchMovie(  )
+    const movie = useFetchMovie( 22 )
     
+    const [trailerActive, setTrailerActive] = useState(false)
+
+    const changeState = () => {
+        setTrailerActive(!trailerActive)
+    }
+
     return (
     <>
         <div className="container" style={ { backgroundImage: `url(${movie.backdrop})`} }>
@@ -22,7 +29,10 @@ export const MoviePage = () => {
                     <div className="info-container animate__animated animate__fadeInRight">
 
                             <div className="year-genders animate__animated animate__fadeInRight">
-                                <span>{ movie.year }     |     {movie.genre1}, {movie.genre2}</span>
+                                {
+                                    movie != null &&
+                                    (<span>{ movie.year }     |     {movie.genre1}, {movie.genre2}</span>)
+                                }
                             </div>
                             <div className="story-title">
                                 <h4>The Story</h4>
@@ -34,7 +44,6 @@ export const MoviePage = () => {
 
                             </div>
 
-
                             <div className="directing-title">
                                 <h4>Directing</h4> 
                             </div>
@@ -44,9 +53,26 @@ export const MoviePage = () => {
                                 </p>
                             </div>
 
-                            <div className="poster-container animate__animated animate__fadeInRight">
-                                <img src={ movie.poster } alt="" className="poster-img"/>
-                                
+                            <div className={trailerActive?`multimedia-container trailerActive animate__animated animate__fadeInRight `:`multimedia-container poster-active animate__animated animate__fadeInRight `}>
+                                {!trailerActive ?
+                                    (<>
+                                        <div className="poster">
+                                            <img src={ movie.poster } alt="" className="poster-img"/>
+                                        </div>
+                                        <div className="trailer-text">
+                                            <span onClick={ changeState }>TRAILER <i className='bx bx-chevron-right'></i><i className='bx bx-chevron-right'></i><i className='bx bx-chevron-right'></i></span>
+                                        </div>
+                                    </>)
+                                    :
+                                    (<>    
+                                        <div className="trailerBackArrow">
+                                            <i className='bx bx-chevrons-left' onClick={ changeState }></i>
+                                        </div>
+                                        <div className="trailer">
+                                            <iframe src="https://www.youtube.com/embed/UqxnFHoKwzE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                        </div>
+                                    </>)
+                                }
                             </div>
 
                     </div>
@@ -60,7 +86,7 @@ export const MoviePage = () => {
 
 
                 <footer className="animate__animated animate__fadeInUp">
-                {movie.actor1}          |          {movie.actor2}          |          {movie.actor3}
+                    {movie.actor1}          |          {movie.actor2}          |          {movie.actor3}
                 </footer>
             </div>
 

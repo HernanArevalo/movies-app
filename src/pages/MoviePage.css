@@ -112,17 +112,45 @@ body{
 .directing{
     grid-column: 2;
 }
-.poster-container{
-    grid-column: 2;
-    position: relative
+
+/* ! Multimedia */
+
+.multimedia-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 600px;
+    margin: 0;
 }
 
+.trailer-text{
+    width: 50%;
+}
 
-
+.poster{
+    margin-right: 50px;
+}
 .poster-img{
-    position: relative;
     height: 200px;
 }
+
+.trailer-text span{
+    cursor: pointer;
+    border-bottom: 2px solid white;
+}
+
+.trailerBackArrow{
+    cursor: pointer;
+}
+
+
+
+.opacityOut{
+    opacity: 0;
+    transition: .5s;
+}
+
 
 .main-container > footer{
     height: 9vh;
