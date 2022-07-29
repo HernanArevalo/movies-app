@@ -1,0 +1,12 @@
+
+.background-div{
+    background-image: url(../assets/searchBackground.jpg);
+    height: 100%;
+    background-position: 0%;
+    filter: blur(3px);
+    opacity: 50%;
+    z-index: -1;
+}
+
+.container{
+}

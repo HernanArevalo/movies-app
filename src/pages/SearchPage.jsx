@@ -1,6 +1,19 @@
+import './SearchPage.css'
+
 
 export const SearchPage = () => {
   return (
-    <h1>SearchPage</h1>
+    <>
+      <div className='background-div'></div>
+      
+      <div className="container">
+
+
+        <h1>SearchPage</h1>
+
+      </div>
+
+    </>
+
   )
 }
