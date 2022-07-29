@@ -4,9 +4,54 @@
     height: 100%;
     background-position: 0%;
     filter: blur(3px);
-    opacity: 50%;
+    opacity: 20%;
     z-index: -1;
 }
 
-.container{
+.search-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background-color: none;
+    color: #fff;
+}
+
+.search-container h3{
+    font-size: 40px;
+    margin-bottom: 20px;
+
+}
+
+.input-container{
+    height: 50px;
+    width: 200px;
+    border-radius: 999px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-container i {
+    color: black;
+    font-size: 25px;
+    padding-right: 10px;
+}
+
+.input-container input{
+    width: 140px;
+    font-weight: 20px;
+    font-family: Aktifo-B;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+
+
+}
+
+.input-container input:focus{
+    outline: none;
+
 }
