@@ -15,22 +15,35 @@ export const SearchPage = () => {
 
   }
 
-  useEffect(() => {
-    console.log(inputValue)
-  
-    return () => {
-      
-    }
-  }, [inputValue])
+  const [movies, setMovies] = useState({
+    data: [],
+    loading: true,
+
+});
+
+  useEffect(()=>{
+
+    getMovies('300')
+      .then( movies =>{
+
+        setMovies({
+          data: movies,
+          loading: false,
+        }
+      )
+        
+      })
+
+    }, [inputValue])
   
   //! SUBMIT
   const handleSubmit = () => {
     e.preventDefault();
 
   }
-  if (inputValue.length > 2) {
-    getMovies(inputValue)
-  }
+
+
+  console.log(movies)
 
   return (
     <>
@@ -52,8 +65,16 @@ export const SearchPage = () => {
         </div>
 
         <div className="movies-container">
+          <h4>Movies list:</h4>
           <ul>
 
+              {!movies.loading && movies.data.map(movie =>(
+
+                <li>{movie.title}</li>
+
+              ))
+
+              }
 
 
           </ul>
