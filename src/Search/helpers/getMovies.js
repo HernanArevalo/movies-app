@@ -12,6 +12,7 @@ export const getMovies = async( querySearch = '300' ) => {
       return { imgPath: movie.backdrop_path,
                id: movie.id,
                title: movie.original_title,
+               year: movie.release_date.slice(0,4)
 
       }
 

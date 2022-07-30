@@ -7,7 +7,7 @@ export const SearchPage = () => {
 
   // const { data:movies, loading } = useFetchMovies( inputSearch )
 
-  const [inputValue, setInputValue] = useState('')
+  const [inputValue, setInputValue] = useState('300')
   //! INPUT
   const handleInputChange = ( e ) => {
 
@@ -23,16 +23,19 @@ export const SearchPage = () => {
 
   useEffect(()=>{
 
-    getMovies('300')
-      .then( movies =>{
-
-        setMovies({
-          data: movies,
-          loading: false,
-        }
-      )
-        
-      })
+    if (inputValue != '') {
+      getMovies(inputValue )
+        .then( movies =>{
+  
+          setMovies({
+            data: movies,
+            loading: false,
+          }
+        )
+          
+        })
+      
+    }
 
     }, [inputValue])
   
@@ -70,7 +73,7 @@ export const SearchPage = () => {
 
               {!movies.loading && movies.data.map(movie =>(
 
-                <li>{movie.title}</li>
+                <li key={movie.id}>{movie.title} - {movie.year}</li>
 
               ))
 
