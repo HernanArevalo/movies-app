@@ -7,7 +7,7 @@ export const SearchPage = () => {
 
   // const { data:movies, loading } = useFetchMovies( inputSearch )
 
-  const [inputValue, setInputValue] = useState('300')
+  const [inputValue, setInputValue] = useState('')
   //! INPUT
   const handleInputChange = ( e ) => {
 
