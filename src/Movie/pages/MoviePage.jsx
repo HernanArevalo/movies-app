@@ -6,11 +6,6 @@ export const MoviePage = () => {
     
     const movie = useFetchMovie( 22 )
     
-    const [trailerActive, setTrailerActive] = useState(false)
-
-    const changeState = () => {
-        setTrailerActive(!trailerActive)
-    }
 
     return (
     <>
@@ -53,26 +48,15 @@ export const MoviePage = () => {
                                 </p>
                             </div>
 
-                            <div className={trailerActive?`multimedia-container trailerActive animate__animated animate__fadeInRight `:`multimedia-container poster-active animate__animated animate__fadeInRight `}>
-                                {!trailerActive ?
-                                    (<>
-                                        <div className="poster">
-                                            <img src={ movie.poster } alt="" className="poster-img"/>
-                                        </div>
-                                        <div className="trailer-text">
-                                            <span onClick={ changeState }>TRAILER <i className='bx bx-chevron-right'></i><i className='bx bx-chevron-right'></i><i className='bx bx-chevron-right'></i></span>
-                                        </div>
-                                    </>)
-                                    :
-                                    (<>    
-                                        <div className="trailerBackArrow">
-                                            <i className='bx bx-chevrons-left' onClick={ changeState }></i>
-                                        </div>
-                                        <div className="trailer">
-                                            <iframe src="https://www.youtube.com/embed/UqxnFHoKwzE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                                        </div>
-                                    </>)
-                                }
+                            <div className='multimedia-container trailerActive animate__animated animate__fadeInRight'>
+                                    
+                                <div className="poster">
+                                    <img src={ movie.poster } alt="" className="poster-img"/>
+                                </div>
+                                <div className="trailer-text">
+                                    <span>TRAILER <i className='bx bx-chevron-right'></i><i className='bx bx-chevron-right'></i><i className='bx bx-chevron-right'></i></span>
+                                </div>
+
                             </div>
 
                     </div>
