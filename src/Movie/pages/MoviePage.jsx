@@ -54,7 +54,8 @@ export const MoviePage = () => {
                                     <img src={ movie.poster } alt="" className="poster-img"/>
                                 </div>
                                 <div className="trailer-text">
-                                    <span>TRAILER <i className='bx bx-chevron-right'></i><i className='bx bx-chevron-right'></i><i className='bx bx-chevron-right'></i></span>
+                                    <span>TRAILER</span>
+                                    <i class='bx bxs-right-arrow'></i>
                                 </div>
 
                             </div>

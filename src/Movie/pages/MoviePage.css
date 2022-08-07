@@ -119,13 +119,18 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     height: 100%;
     width: 600px;
     margin: 0;
 }
 
+
 .trailer-text{
-    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
 }
 
 .poster{
@@ -135,9 +140,24 @@ body{
     height: 200px;
 }
 
-.trailer-text span{
+.trailer-text {
     cursor: pointer;
-    border-bottom: 2px solid white;
+    background-color: #fff;
+    opacity: .5;
+    color: #000;
+    height: 40px;
+    border-radius: 999px;
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: .5s;
+}
+.trailer-text:hover{
+    opacity: 1;
+}
+
+.trailer-text span{
+    margin-right: 10px;
 }
 
 .trailerBackArrow{
