@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import { useFetchMovie } from "../hooks/useFetchMovie"
+import { TrailerComponent } from '../components/TrailerComponent'
+
 import './MoviePage.css'
 
 export const MoviePage = () => {
     
     const movie = useFetchMovie( 22 )
     
+   
 
     return (
     <>
         <div className="container" style={ { backgroundImage: `url(${movie.backdrop})`} }>
-
             <div className="main-container"> 
 
                 
@@ -23,42 +25,40 @@ export const MoviePage = () => {
 
                     <div className="info-container animate__animated animate__fadeInRight">
 
-                            <div className="year-genders animate__animated animate__fadeInRight">
-                                {
-                                    movie != null &&
-                                    (<span>{ movie.year }     |     {movie.genre1}, {movie.genre2}</span>)
-                                }
-                            </div>
-                            <div className="story-title">
-                                <h4>The Story</h4>
-                            </div>
-                            <div className="story animate__animated animate__fadeInRight">
-                                <p> 
-                                    { movie.story }
-                                </p>
+                        <div className="year-genders animate__animated animate__fadeInRight">
+                            {
+                                movie != null &&
+                                (<span>{ movie.year }     |     {movie.genre1}, {movie.genre2}</span>)
+                            }
+                        </div>
+                        <div className="story-title">
+                            <h4>The Story</h4>
+                        </div>
+                        <div className="story animate__animated animate__fadeInRight">
+                            <p> 
+                                { movie.story }
+                            </p>
+                        </div>
 
-                            </div>
+                        <div className="directing-title">
+                            <h4>Directing</h4> 
+                        </div>
+                        <div className="directing-content animate__animated animate__fadeInRight">
+                            <p> 
+                                { movie.director }
+                            </p>
+                        </div>
 
-                            <div className="directing-title">
-                                <h4>Directing</h4> 
+                        <div className='multimedia-container trailerActive animate__animated animate__fadeInRight'>
+                            <div className="poster">
+                                <img src={ movie.poster } alt="" className="poster-img"/>
                             </div>
-                            <div className="directing-content animate__animated animate__fadeInRight">
-                                <p> 
-                                    { movie.director }
-                                </p>
+                            <div className="trailer-text">
+                                <span>TRAILER</span>
+                                <i className='bx bxs-right-arrow'></i>
+                                
                             </div>
-
-                            <div className='multimedia-container trailerActive animate__animated animate__fadeInRight'>
-                                    
-                                <div className="poster">
-                                    <img src={ movie.poster } alt="" className="poster-img"/>
-                                </div>
-                                <div className="trailer-text">
-                                    <span>TRAILER</span>
-                                    <i class='bx bxs-right-arrow'></i>
-                                </div>
-
-                            </div>
+                        </div>
 
                     </div>
 
@@ -68,11 +68,12 @@ export const MoviePage = () => {
                     <h4>{ movie?.tagline }</h4>
                 </div>
 
-
-
                 <footer className="animate__animated animate__fadeInUp">
                     {movie.actor1}          |          {movie.actor2}          |          {movie.actor3}
                 </footer>
+
+                <TrailerComponent className='asd'/>
+
             </div>
 
 

@@ -22,7 +22,7 @@ body{
 }
 .main-container{
     pointer-events: none;
-    
+    display: block;
     background: linear-gradient(90deg, rgba(2,0,36,0) 20%, rgba(0,0,0,0.7) 35%);
     background-size: 200% 100%;
     background-position: 0% 0;
@@ -142,8 +142,7 @@ body{
 
 .trailer-text {
     cursor: pointer;
-    background-color: #fff;
-    opacity: .5;
+    background-color: rgba(255, 255, 255, .5);
     color: #000;
     height: 40px;
     border-radius: 999px;
@@ -153,11 +152,13 @@ body{
     transition: .5s;
 }
 .trailer-text:hover{
-    opacity: 1;
+    background-color: rgba(255, 255, 255, 1);
 }
+
 
 .trailer-text span{
     margin-right: 10px;
+    line-height: 20px;
 }
 
 .trailerBackArrow{
