@@ -23,7 +23,7 @@ export const getMovie = async( id = 290859 ) => {
                     title: movieData.title,
                     story: movieData.overview,
                     tagline: movieData.tagline,
-                    year: (movieData.release_date).slice(0,4),
+                    year: (movieData.release_date)?.slice(0,4),
                     actor1: actors[0],
                     actor2: actors[1],
                     actor3: actors[2],

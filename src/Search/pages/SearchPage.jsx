@@ -46,7 +46,7 @@ export const SearchPage = () => {
   }
 
 
-  console.log(movies)
+  console.log(movies.data)
 
   return (
     <>
@@ -68,19 +68,21 @@ export const SearchPage = () => {
         </div>
 
         <div className="movies-container">
-          <h4>Movies list:</h4>
-          <ul>
+          <div className='movies-list'>
 
               {!movies.loading && movies.data.map(movie =>(
 
-                <li key={movie.id}>{movie.title} - {movie.year}</li>
+                <div key={movie.id} className='movie-list-item' style={ { backgroundImage: `url(${movie.poster})`} }>
+                  <span>{movie.title}</span>
+                  <span>{movie.year}</span>
+                </div>
 
               ))
 
               }
 
 
-          </ul>
+          </div>
 
         </div>
 

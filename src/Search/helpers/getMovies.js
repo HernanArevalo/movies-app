@@ -9,7 +9,7 @@ export const getMovies = async( querySearch = '300' ) => {
 
 
     const movies = data?.map( movie => {
-      return { imgPath: movie.backdrop_path,
+      return { poster: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
                id: movie.id,
                title: movie.original_title,
                year: movie.release_date.slice(0,4)
