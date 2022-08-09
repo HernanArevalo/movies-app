@@ -72,9 +72,15 @@ export const SearchPage = () => {
 
               {!movies.loading && movies.data.map(movie =>(
 
-                <div key={movie.id} className='movie-list-item' style={ { backgroundImage: `url(${movie.poster})`} }>
+                <div key={movie.id} 
+                     className='movie-list-item' 
+                     style={ movie.image_path != null? { backgroundImage: `url(${movie.image})`}: { backgroundImage: `url(${movie.poster})`}}
+                >
+                <div className='text-movie-list-item'>
                   <span>{movie.title}</span>
                   <span>{movie.year}</span>
+
+                </div>
                 </div>
 
               ))

@@ -66,13 +66,22 @@
 .movie-list-item{
     height: 150px;
     width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
     background-color: grey;
     margin: 10px;
     text-align: center;
     background-size: 100%;
-    
+    border-radius: 20px;
+}
+
+.text-movie-list-item{
+    background-color: rgba(0, 0, 0, .5);
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
