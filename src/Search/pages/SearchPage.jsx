@@ -1,15 +1,12 @@
 
 import { useEffect, useState } from 'react'
-import { useFetchMovies } from '../hooks/useFetchMovies'
-// import { getMovies } from '../helpers/getMovies'
-// import { useForm } from '../hooks/useForm'
+import { MoviesGrid } from '../components/MoviesGrid'
+// import { useFetchMovies } from '../hooks/useFetchMovies'
 import './SearchPage.css'
 
 export const SearchPage = () => {
 
   const [inputValue, setInputValue] = useState('')
-  const { data:movies, loading } = useFetchMovies( inputValue )
-  
 
     //! INPUT
     const handleInputChange = ( e ) => {
@@ -51,35 +48,14 @@ export const SearchPage = () => {
 
         </div>
 
+
         <div className="movies-container">
           <div className='movies-list'>
-
-              {!loading && movies.map(movie =>(
-
-                <div key={movie.id} 
-                     className='movie-list-item' 
-                     style={ movie.image_path != null? 
-                            { backgroundImage: `url(${movie.image})`}: (
-                                movie.poster_path != null? 
-                                { backgroundImage: `url(${movie.poster})`}: 
-                                { backgroundImage: `url()`})}
-                >
-                  <div className='text-movie-list-item'>
-                    <span>{movie.title}</span>
-                    <span>{movie.year}</span>
-
-                  </div>
-                </div>
-
-              ))
-
-              }
-
-
+            <MoviesGrid 
+              inputValue={ inputValue }
+            />
           </div>
-
         </div>
-
 
       </div>
 

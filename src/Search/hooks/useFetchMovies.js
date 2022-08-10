@@ -8,25 +8,32 @@ export const useFetchMovies = ( value ) => {
         data: [],
         loading: true,
       });
-    
-      
-      useEffect(()=>{
         
-        if (value != '') {
-          getMovies( value )
-          .then( movies =>{
-            setState({
-                data: movies,
-                loading: false,
-              }
-              )
-              
-            })
-            
-          }
           
-        }, [value])
+          useEffect(()=>{
+            
+            if (value != '') {
+                    getMovies( value )
+                    .then( movies =>{
+                      setState({
+                          data: movies,
+                          loading: false,
+                        }
+                        )
+                        
+                      });
+                
+              }
+            else{
+                setState({
+                    data: [],
+                    loading: true,
+                  });
+            };
     
+            }, [value]);
 
-  return state
+
+    
+  return state;
 }
