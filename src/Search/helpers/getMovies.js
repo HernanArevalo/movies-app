@@ -11,8 +11,8 @@ export const getMovies = async( querySearch = '300' ) => {
     const movies = data.map( movie => {
       return { poster_path: movie.poster_path,
                image_path: movie.backdrop_path,
-               poster: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
-               image: `https://image.tmdb.org/t/p/original${movie.backdrop_path}`,
+               poster: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,
+               image: `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`,
                id: movie.id,
                title: movie.original_title,
                year: movie.release_date?.slice(0,4)

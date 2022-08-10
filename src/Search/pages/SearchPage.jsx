@@ -1,12 +1,22 @@
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
+import queryString from 'query-string'
+
 import { MoviesGrid } from '../components/MoviesGrid'
-// import { useFetchMovies } from '../hooks/useFetchMovies'
+
 import './SearchPage.css'
 
 export const SearchPage = () => {
 
-  const [inputValue, setInputValue] = useState('')
+  const navigate = useNavigate()
+  const location = useLocation();
+
+  const {q = ''} = queryString.parse(location.search)
+
+  console.log( q )
+
+  const [inputValue, setInputValue] = useState(q)
 
     //! INPUT
     const handleInputChange = ( e ) => {
@@ -20,6 +30,8 @@ export const SearchPage = () => {
   //! SUBMIT
   const handleSubmit = ( e ) => {
     e.preventDefault();
+
+    navigate(`?q=${ inputValue.toLocaleLowerCase().trim() }`)
 
   }
 

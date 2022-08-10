@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo } from 'react'
 import { useParams } from 'react-router-dom'
 import { useFetchMovie } from "../hooks/useFetchMovie"
 import { TrailerComponent } from '../components/TrailerComponent'
@@ -8,10 +8,10 @@ import './MoviePage.css'
 export const MoviePage = () => {
     
     
-    const { movieId } = useParams();
-    console.log(movieId);
+    const { movieId, ...rest } = useParams();
     
     const movie = useFetchMovie( movieId );
+
 
     return (
     <>
