@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { useFetchMovie } from "../hooks/useFetchMovie"
 import { TrailerComponent } from '../components/TrailerComponent'
 
@@ -6,9 +7,11 @@ import './MoviePage.css'
 
 export const MoviePage = () => {
     
-    const movie = useFetchMovie( 22 )
     
-   
+    const { movieId } = useParams();
+    console.log(movieId);
+    
+    const movie = useFetchMovie( movieId );
 
     return (
     <>
@@ -72,7 +75,7 @@ export const MoviePage = () => {
                     {movie.actor1}          |          {movie.actor2}          |          {movie.actor3}
                 </footer>
 
-                <TrailerComponent className='asd'/>
+                <TrailerComponent/>
 
             </div>
 

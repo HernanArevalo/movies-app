@@ -1,5 +1,5 @@
 import { useState, useLayoutEffect } from "react"
-import { getMovie } from "../helpers/getMovie";
+import { getMovieById } from "../helpers/getMovieById";
 
 export const useFetchMovie = ( id ) => {
 
@@ -7,7 +7,7 @@ export const useFetchMovie = ( id ) => {
 
     useLayoutEffect(()=>{
 
-        getMovie( id )
+        getMovieById( id )
             .then( movie =>{
 
                 setState(movie);

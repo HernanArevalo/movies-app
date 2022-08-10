@@ -12,7 +12,7 @@ export const SearchPage = () => {
   const handleInputChange = ( e ) => {
 
     setInputValue( e.target.value );
-
+    console.log(e.target.value)
   }
 
   const [movies, setMovies] = useState({
@@ -59,11 +59,16 @@ export const SearchPage = () => {
         <div className="input-container">
 
           <i className='bx bxs-search-alt-2'></i>
-          <input 
-            type="text"
-            onChange={ handleInputChange }
-            value={ inputValue }
-          />
+          <form action="">
+            <input 
+              type="text"
+              name='inputValue'
+              placeholder='Search a Movie'
+              onChange={ handleInputChange }
+              value={ inputValue }
+            />
+            
+          </form>
 
         </div>
 
@@ -76,11 +81,11 @@ export const SearchPage = () => {
                      className='movie-list-item' 
                      style={ movie.image_path != null? { backgroundImage: `url(${movie.image})`}: { backgroundImage: `url(${movie.poster})`}}
                 >
-                <div className='text-movie-list-item'>
-                  <span>{movie.title}</span>
-                  <span>{movie.year}</span>
+                  <div className='text-movie-list-item'>
+                    <span>{movie.title}</span>
+                    <span>{movie.year}</span>
 
-                </div>
+                  </div>
                 </div>
 
               ))

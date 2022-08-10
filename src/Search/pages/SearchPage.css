@@ -71,9 +71,14 @@
     margin: 10px;
     text-align: center;
     background-size: 100%;
+    background-position: center;
     border-radius: 20px;
+    transition: .5s ease-in-out;
 }
+.movie-list-item:hover{
+    background-size: 120%;
 
+}
 .text-movie-list-item{
     background-color: rgba(0, 0, 0, .5);
     height: 100%;

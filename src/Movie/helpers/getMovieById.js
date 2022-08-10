@@ -1,5 +1,5 @@
 
-export const getMovie = async( id = 290859 ) => {
+export const getMovieById = async( id = 290859 ) => {
 
     const movieUrl = `https://api.themoviedb.org/3/movie/${encodeURI(id)}?api_key=0b8f2d2a77497c17a0f15b1d4edfa0f8&language=en-US`;
     const resp = await fetch(movieUrl);

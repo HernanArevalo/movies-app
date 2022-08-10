@@ -10,9 +10,9 @@ export const MoviesRoutes = () => {
                 <Routes>
 
                     <Route path="search" element={<SearchPage />} />
-                    <Route path="movie" element={<MoviePage />} />
+                    <Route path="movie/:movieId" element={<MoviePage />} />
 
-                    <Route path="/" element={<Navigate to='/movie' />} />
+                    <Route path="/" element={<Navigate to='/search' />} />
 
                 </Routes>
             </div>
