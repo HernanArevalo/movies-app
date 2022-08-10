@@ -23,4 +23,5 @@ export const getMovies = async( querySearch = '300' ) => {
     })
 
   return movies
+
 }

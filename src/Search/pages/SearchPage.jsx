@@ -1,52 +1,31 @@
 
 import { useEffect, useState } from 'react'
-import { getMovies } from '../helpers/getMovies'
+import { useFetchMovies } from '../hooks/useFetchMovies'
+// import { getMovies } from '../helpers/getMovies'
+// import { useForm } from '../hooks/useForm'
 import './SearchPage.css'
 
 export const SearchPage = () => {
 
-  // const { data:movies, loading } = useFetchMovies( inputSearch )
-
   const [inputValue, setInputValue] = useState('')
-  //! INPUT
-  const handleInputChange = ( e ) => {
-
-    setInputValue( e.target.value );
-    console.log(e.target.value)
-  }
-
-  const [movies, setMovies] = useState({
-    data: [],
-    loading: true,
-
-});
-
-  useEffect(()=>{
-
-    if (inputValue != '') {
-      getMovies(inputValue )
-        .then( movies =>{
+  const { data:movies, loading } = useFetchMovies( inputValue )
   
-          setMovies({
-            data: movies,
-            loading: false,
-          }
-        )
-          
-        })
-      
+
+    //! INPUT
+    const handleInputChange = ( e ) => {
+  
+      setInputValue( e.target.value );
     }
-
-    }, [inputValue])
   
+
+  //? PARTE NUEVA
+
   //! SUBMIT
-  const handleSubmit = () => {
+  const handleSubmit = ( e ) => {
     e.preventDefault();
 
   }
 
-
-  console.log(movies.data)
 
   return (
     <>
@@ -59,7 +38,7 @@ export const SearchPage = () => {
         <div className="input-container">
 
           <i className='bx bxs-search-alt-2'></i>
-          <form action="">
+          <form onSubmit={ handleSubmit }>
             <input 
               type="text"
               name='inputValue'
@@ -75,11 +54,15 @@ export const SearchPage = () => {
         <div className="movies-container">
           <div className='movies-list'>
 
-              {!movies.loading && movies.data.map(movie =>(
+              {!loading && movies.map(movie =>(
 
                 <div key={movie.id} 
                      className='movie-list-item' 
-                     style={ movie.image_path != null? { backgroundImage: `url(${movie.image})`}: { backgroundImage: `url(${movie.poster})`}}
+                     style={ movie.image_path != null? 
+                            { backgroundImage: `url(${movie.image})`}: (
+                                movie.poster_path != null? 
+                                { backgroundImage: `url(${movie.poster})`}: 
+                                { backgroundImage: `url()`})}
                 >
                   <div className='text-movie-list-item'>
                     <span>{movie.title}</span>
