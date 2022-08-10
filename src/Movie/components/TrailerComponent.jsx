@@ -4,14 +4,15 @@ export const TrailerComponent = () => {
 
   const imagenesLight = document.querySelector('.agregar-imagen')
 
+  const trailerTouched = () => {
+    console.log('trailer touched')
 
-
+  }
 
   return (
-    <div className='trailer-container'>
-      <h1>TrailerComponent</h1> 
-      <iframe width="560" 
-              height="315" 
+    <section className='trailer-container' onClick={ trailerTouched }>
+      <iframe width="80%" 
+              height="100vw" 
               src="https://www.youtube.com/embed/UqxnFHoKwzE" 
               title="YouTube video player" 
               frameBorder="0" 
@@ -19,6 +20,6 @@ export const TrailerComponent = () => {
               allowFullScreen>
               
       </iframe>
-    </div>
+    </section>
   )
 }

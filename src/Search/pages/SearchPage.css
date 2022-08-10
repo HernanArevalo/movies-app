@@ -72,6 +72,8 @@ a{
     width: 300px;
 
     background-color: black;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .8);
+
     margin: 10px;
     text-align: center;
     background-size: 100%;
@@ -80,9 +82,6 @@ a{
     transition: background-size .5s ease-in-out;
 }
 
-.movie-list-item{
-    background-image: ;
-}
 
 .movie-list-item:hover{
     background-size: 120%;

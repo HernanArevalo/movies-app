@@ -75,13 +75,11 @@ export const MoviePage = () => {
                     {movie.actor1}          |          {movie.actor2}          |          {movie.actor3}
                 </footer>
 
-                <TrailerComponent/>
 
             </div>
+            
+            <TrailerComponent/>
 
-
-            {/* <img src={posterImg} alt="" /> */}
-            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/UqxnFHoKwzE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       */}
         </div>
     </>
 

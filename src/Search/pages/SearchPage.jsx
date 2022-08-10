@@ -51,9 +51,10 @@ export const SearchPage = () => {
             <input 
               type="text"
               name='inputValue'
-              placeholder='Search a Movie'
+              placeholder=''
               onChange={ handleInputChange }
               value={ inputValue }
+              autoComplete="off"
             />
             
           </form>
