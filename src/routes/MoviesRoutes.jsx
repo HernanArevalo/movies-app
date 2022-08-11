@@ -11,7 +11,6 @@ export const MoviesRoutes = () => {
 
                     <Route path="search" element={<SearchPage />} />
                     <Route path="movie/:movieId" element={<MoviePage />} />
-
                     <Route path="movie/:movieId/trailer" element={<MoviePage />} />
 
                     <Route path="/" element={<Navigate to='/search' />} />

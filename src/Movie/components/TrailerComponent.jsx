@@ -3,6 +3,9 @@ import './TrailerComponent.css';
 
 export const TrailerComponent = ( {trailerState=false, trailer} ) => {
 
+  localStorage.setItem("trailer", "true")
+  console.log('trailer')
+
   const [showTrailer, setShowTrailer] = useState(trailerState)
 
   useEffect(() => {

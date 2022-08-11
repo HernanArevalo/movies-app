@@ -8,7 +8,8 @@ import './MoviePage.css'
 
 export const MoviePage = () => {
     
-    
+    localStorage.setItem("trailer", "false")
+
     const { movieId, ...rest } = useParams();
     
     const movie = useFetchMovie( movieId );
@@ -17,7 +18,7 @@ export const MoviePage = () => {
 
     const changeTrailerState = () =>{ setTrailerState(!trailerState) }
 
-
+    console.log(localStorage.getItem("trailer"))
     return (
     <>
         <div className="container" style={ { backgroundImage: `url(${movie.backdrop})`} }>
@@ -107,7 +108,7 @@ export const MoviePage = () => {
 * 
 * ! 1- background de peliculas sin poster (SearchPage)
 * * 2- getMovieById que también aporte el trailer
-* * 3- X en el TrailerComponent
+* ! 3- X en el TrailerComponent
 * * 4- Agrupar actores y generos en el getMovieById
 
 */

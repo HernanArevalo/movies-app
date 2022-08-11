@@ -12,8 +12,9 @@ export const MoviesGrid = ( {inputValue} ) => {
   return (
     <>
 
-        {loading && <span>loading</span>}
-        {!loading && movies.map(movie =>(
+        {loading? 
+        <span>loading</span>:
+        movies.map(movie =>(
           <Link to={`/movie/${movie.id}`} key={ movie.id } >
             <div  className='movie-list-item' 
                   style= { movie.image_path != null ? 
