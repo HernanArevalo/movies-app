@@ -1,9 +1,10 @@
-import { useMemo } from 'react'
-import { useParams } from 'react-router-dom'
+import { useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
 import { useFetchMovie } from "../hooks/useFetchMovie"
 import { TrailerComponent } from '../components/TrailerComponent'
 
 import './MoviePage.css'
+
 
 export const MoviePage = () => {
     
@@ -11,6 +12,10 @@ export const MoviePage = () => {
     const { movieId, ...rest } = useParams();
     
     const movie = useFetchMovie( movieId );
+
+    const [trailerState, setTrailerState] = useState( false )
+
+    const changeTrailerState = () =>{ setTrailerState(!trailerState) }
 
 
     return (
@@ -56,7 +61,7 @@ export const MoviePage = () => {
                             <div className="poster">
                                 <img src={ movie.poster } alt="" className="poster-img"/>
                             </div>
-                            <div className="trailer-text">
+                            <div className="trailer-text" onClick={ changeTrailerState }>
                                 <span>TRAILER</span>
                                 <i className='bx bxs-right-arrow'></i>
                                 
@@ -77,8 +82,15 @@ export const MoviePage = () => {
 
 
             </div>
-            
-            <TrailerComponent/>
+
+            <TrailerComponent trailerState={ trailerState } movieId={ movie.id } className="movie-trrailer"/>
+
+
+            <Link to={`/search`}>
+                <div className='search-icon'>
+                    <i className='bx bx-search-alt-2' ></i>
+                </div>
+            </Link>
 
         </div>
     </>
@@ -87,8 +99,9 @@ export const MoviePage = () => {
 }
 
 // ? 
-// ? COSAS PARA CAMBIAR
+// ? TO DO
 // ? 
-// ? 1- Titulo. Sacarlo del grid y corregir margenes
-// ? 2- Géneros de las peliculas separados
-// ? 3- Actores separados
+// ? 1- background de peliculas sin poster (SearchPage)
+// ? 2- getMovieById que también aporte el trailer
+// ? 3- X en el TrailerComponent
+// ? 4- Agrupar actores y generos en el getMovieById

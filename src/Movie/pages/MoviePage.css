@@ -13,6 +13,24 @@ body{
     margin: 0;
 }
 
+.search-icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    font-size: 40px;
+    background-color: #000;
+    border-radius: 999px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+
 .container{
     position: absolute;
     top: 0;
