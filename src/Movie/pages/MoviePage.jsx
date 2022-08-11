@@ -83,7 +83,10 @@ export const MoviePage = () => {
 
             </div>
 
-            <TrailerComponent trailerState={ trailerState } movieId={ movie.id } className="movie-trrailer"/>
+            <TrailerComponent trailerState={ trailerState } 
+                              trailer={ movie.trailer } 
+
+                              className="movie-trrailer"/>
 
 
             <Link to={`/search`}>
@@ -98,10 +101,13 @@ export const MoviePage = () => {
   )
 }
 
-// ? 
-// ? TO DO
-// ? 
-// ? 1- background de peliculas sin poster (SearchPage)
-// ? 2- getMovieById que también aporte el trailer
-// ? 3- X en el TrailerComponent
-// ? 4- Agrupar actores y generos en el getMovieById
+
+/**
+* TODO 
+* 
+* ! 1- background de peliculas sin poster (SearchPage)
+* * 2- getMovieById que también aporte el trailer
+* * 3- X en el TrailerComponent
+* * 4- Agrupar actores y generos en el getMovieById
+
+*/
