@@ -13,10 +13,10 @@ export const MoviesGrid = ( {inputValue} ) => {
     <>
 
         {loading? 
-        <span>loading</span>:
+        <span></span>:
         movies.map(movie =>(
           <Link to={`/movie/${movie.id}`} key={ movie.id } >
-            <div  className='movie-list-item' 
+            <div  className='movie-list-item animate__animated animate__fadeIn' 
                   style= { movie.image_path != null ? 
                           { backgroundImage: `url(${movie.image})`}: (
                             movie.poster_path != null? 

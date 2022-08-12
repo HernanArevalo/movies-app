@@ -85,7 +85,7 @@ export const MoviePage = () => {
 
             </div>
 
-            {location.pathname.includes('trailer') &&
+            { location.pathname.includes('trailer') &&
                 <TrailerComponent 
                               trailer={ movie.trailer }
                               id={ movie.id }/>
