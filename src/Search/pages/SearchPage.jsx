@@ -35,14 +35,13 @@ export const SearchPage = () => {
 
   }
 
-
   return (
     <>
       <div className='background-div'></div>
 
       <div className="search-container">
 
-        <h3>Search a Movie:</h3>
+        <h3 className='animate__animated animate__fadeInDown'>Search a Movie:</h3>
 
         <div className="input-container">
 
