@@ -1,36 +1,28 @@
-import { useEffect, useState } from 'react';
+import { Navigate, useNavigate } from 'react-router-dom'
 import './TrailerComponent.css';
 
-export const TrailerComponent = ( {trailerState=false, trailer} ) => {
+export const TrailerComponent = ( {trailer, id} ) => {
 
-  localStorage.setItem("trailer", "true")
-  console.log('trailer')
+  const navigate = useNavigate()
 
-  const [showTrailer, setShowTrailer] = useState(trailerState)
-
-  useEffect(() => {
-    setShowTrailer(trailerState)
-    ;
-  }, [trailerState])
-
-
-  const trailerTouched = () => {
-    setShowTrailer(false)
-
+  const goBack = () => {
+    navigate(`../movie/${id}`, { replace: true })
   }
 
-
-
   return (
-    <section className={showTrailer? 'trailer-container show-trailer':'trailer-container'} onClick={ trailerTouched }>
-      <iframe 
-              src={ trailer }
-              title="YouTube video player" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen>
-              
-      </iframe>
-    </section>
+      <section  onClick={ goBack }
+                className='trailer-container animate__animated animate__fadeInRight' >
+        <iframe 
+                className='animate__animated animate__fadeInRight'
+                src={ trailer }
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen>
+                
+        </iframe>
+      </section>
+
+
   )
 }

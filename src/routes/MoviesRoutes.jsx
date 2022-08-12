@@ -9,11 +9,15 @@ export const MoviesRoutes = () => {
             <div className="container">
                 <Routes>
 
-                    <Route path="search" element={<SearchPage />} />
-                    <Route path="movie/:movieId" element={<MoviePage />} />
-                    <Route path="movie/:movieId/trailer" element={<MoviePage />} />
+                    <Route path="search" 
+                           element={<SearchPage />} />
+                    <Route path="movie/:movieId" 
+                           element={<MoviePage />} />
+                    <Route path="movie/:movieId/trailer" 
+                           element={<MoviePage />} />
 
-                    <Route path="/" element={<Navigate to='/search' />} />
+                    <Route path="/" 
+                           element={<Navigate to='/search' />} />
 
                 </Routes>
             </div>

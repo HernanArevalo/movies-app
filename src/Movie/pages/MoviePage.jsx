@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useLocation, useParams, Navigate } from 'react-router-dom'
 import { useFetchMovie } from "../hooks/useFetchMovie"
 import { TrailerComponent } from '../components/TrailerComponent'
 
@@ -8,17 +8,17 @@ import './MoviePage.css'
 
 export const MoviePage = () => {
     
-    localStorage.setItem("trailer", "false")
-
     const { movieId, ...rest } = useParams();
     
+
+    const location = useLocation();
+
     const movie = useFetchMovie( movieId );
 
     const [trailerState, setTrailerState] = useState( false )
 
     const changeTrailerState = () =>{ setTrailerState(!trailerState) }
 
-    console.log(localStorage.getItem("trailer"))
     return (
     <>
         <div className="container" style={ { backgroundImage: `url(${movie.backdrop})`} }>
@@ -62,11 +62,12 @@ export const MoviePage = () => {
                             <div className="poster">
                                 <img src={ movie.poster } alt="" className="poster-img"/>
                             </div>
-                            <div className="trailer-text" onClick={ changeTrailerState }>
-                                <span>TRAILER</span>
-                                <i className='bx bxs-right-arrow'></i>
-                                
-                            </div>
+                            <Link to={"trailer" }>
+                                <div className="trailer-text" onClick={ changeTrailerState }>
+                                    <span>TRAILER</span>
+                                    <i className='bx bxs-right-arrow'></i>
+                                </div>
+                            </Link>
                         </div>
 
                     </div>
@@ -84,10 +85,12 @@ export const MoviePage = () => {
 
             </div>
 
-            <TrailerComponent trailerState={ trailerState } 
-                              trailer={ movie.trailer } 
+            {location.pathname.includes('trailer') &&
+                <TrailerComponent 
+                              trailer={ movie.trailer }
+                              id={ movie.id }/>
 
-                              className="movie-trrailer"/>
+            }
 
 
             <Link to={`/search`}>
