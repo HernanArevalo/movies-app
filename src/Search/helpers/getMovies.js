@@ -9,6 +9,7 @@ export const getMovies = async( querySearch = '300' ) => {
     const { results:data } = await resp.json();
 
     const movies = data.map( movie => {
+
       return { poster_path: movie.poster_path,
                image_path: movie.backdrop_path,
                poster: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,

@@ -2,6 +2,7 @@
   "name": "00-01-movies-app",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://hernanarevalo.github.io/movies-app/",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,6 +11,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "gh-pages": "^4.0.0",
     "query-string": "^7.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

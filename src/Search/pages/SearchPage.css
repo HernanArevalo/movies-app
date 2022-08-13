@@ -8,7 +8,9 @@
     z-index: -1;
 }
 
-
+.search-h3{
+    cursor: pointer;
+}
 
 .search-container{
     position: absolute;

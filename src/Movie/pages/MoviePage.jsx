@@ -113,5 +113,7 @@ export const MoviePage = () => {
 * * 2- getMovieById que también aporte el trailer
 * ! 3- X en el TrailerComponent
 * * 4- Agrupar actores y generos en el getMovieById
-* * 5- En searchPage: que las peliculas sin toda la data no aparezcan 
+* ! 5- SearchPage: que las peliculas sin toda la data no aparezcan 
+* ! 6- SearchPage: que muestre las peliculas populares si no hay busqueda
+* ! 7- Hacer el modo responsive para celulares (MovieList en columna)
 */

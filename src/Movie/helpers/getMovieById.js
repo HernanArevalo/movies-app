@@ -16,7 +16,8 @@ export const getMovieById = async( id = 290859 ) => {
         const actors = [ creditsData.cast[0].name, creditsData.cast[1].name, creditsData.cast[2].name ]
         const director = creditsData.crew.filter( member => member.known_for_department == "Directing")[0].name
 
-        const genres = [ movieData.genres[0].name, movieData.genres[1].name]
+            const genres = [ movieData.genres[0].name, movieData.genres[1].name]
+            
 
         const TrailerUrl = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=0b8f2d2a77497c17a0f15b1d4edfa0f8&language=en-US`
         const resp3 = await fetch(TrailerUrl);

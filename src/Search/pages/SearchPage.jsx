@@ -13,19 +13,19 @@ export const SearchPage = () => {
   const location = useLocation();
 
   const {q = ''} = queryString.parse(location.search)
-
-  console.log( q )
-
   const [inputValue, setInputValue] = useState(q)
 
+  
     //! INPUT
     const handleInputChange = ( e ) => {
   
       setInputValue( e.target.value );
+      navigate(`?q=${ e.target.value.toLocaleLowerCase().trim() }`)
+
     }
   
 
-  //? PARTE NUEVA
+  //? NEW
 
   //! SUBMIT
   const handleSubmit = ( e ) => {
@@ -41,7 +41,7 @@ export const SearchPage = () => {
 
       <div className="search-container">
 
-        <h3 className='animate__animated animate__fadeInDown'>Search a Movie:</h3>
+        <h3 className='search-h3 animate__animated animate__fadeInDown'>Search a Movie:</h3>
 
         <div className="input-container">
 
