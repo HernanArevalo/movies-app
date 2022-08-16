@@ -116,4 +116,6 @@ export const MoviePage = () => {
 * ! 5- SearchPage: que las peliculas sin toda la data no aparezcan 
 * ! 6- SearchPage: que muestre las peliculas populares si no hay busqueda
 * ! 7- Hacer el modo responsive para celulares (MovieList en columna)
+* ! 8- Icono de page 
+
 */
