@@ -21,7 +21,7 @@ export const MoviePage = () => {
 
     return (
     <>
-        <div className="container" style={ { backgroundImage: `url(${movie.backdrop})`} }>
+        <div className="container animate__animated animate__fadeIn " style={ { backgroundImage: `url(${movie.backdrop})`} }>
             <div className="main-container"> 
 
                 
