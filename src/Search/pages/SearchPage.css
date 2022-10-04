@@ -1,32 +1,46 @@
 
 .background-div{
     background-image: url(../assets/searchBackground.jpg);
-    height: 100%;
+    height: 100vh;
     background-position: 0%;
     filter: blur(3px);
     opacity: 20%;
     z-index: -1;
+
+}
+
+.search-head{
+    padding-left: 30px;
+    padding-top: 30px;
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.5) 70%, rgba(0,255,0,0) 100%);
+    height: 200px;
 }
 
 .search-h3{
     cursor: pointer;
 }
 
-.search-container{
+.search-page-container{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px;
+    padding: 0px;
     background-color: none;
     color: #fff;
 }
 
-.search-container h3{
+.search-page-container h3{
     font-size: 40px;
-    margin-bottom: 20px;
-
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
+
+
+/* Input */
 
 a{
     text-decoration: none;
@@ -34,7 +48,7 @@ a{
 
 .input-container{
     height: 50px;
-    width: 200px;
+    width: 300px;
     border-radius: 999px;
     background-color: white;
     display: flex;
@@ -63,6 +77,8 @@ a{
     outline: none;
 
 }
+
+/* Movie List */
 
 .movies-list{
     display: flex;

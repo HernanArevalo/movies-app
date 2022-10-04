@@ -39,27 +39,29 @@ export const SearchPage = () => {
     <>
       <div className='background-div'></div>
 
-      <div className="search-container">
+      <div className="search-page-container">
 
-        <h3 className='search-h3 animate__animated animate__fadeInDown'>Search a Movie:</h3>
+        <div className="search-head">
+          
+          <h3 className='search-h3 animate__animated animate__fadeInDown'>Search a Movie:</h3>
 
-        <div className="input-container">
+          <div className="input-container">
 
-          <i className='bx bxs-search-alt-2'></i>
-          <form onSubmit={ handleSubmit }>
-            <input 
-              type="text"
-              name='inputValue'
-              placeholder=''
-              onChange={ handleInputChange }
-              value={ inputValue }
-              autoComplete="off"
-            />
-            
-          </form>
+            <i className='bx bxs-search-alt-2'></i>
+            <form onSubmit={ handleSubmit }>
+              <input 
+                type="text"
+                name='inputValue'
+                placeholder=''
+                onChange={ handleInputChange }
+                value={ inputValue }
+                autoComplete="off"
+              />
+              
+            </form>
 
+          </div>
         </div>
-
 
         <div className="movies-container">
           <div className='movies-list'>

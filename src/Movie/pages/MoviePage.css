@@ -1,4 +1,4 @@
-body{
+/* body{
     overflow: hidden;
     padding: 0;
     height: 100vh;
@@ -6,12 +6,8 @@ body{
     color: #fff;
     z-index: -1000;
     position: relative;
-}
+} */
 
-*{
-    padding: 0;
-    margin: 0;
-}
 
 .search-icon{
     position: absolute;
@@ -31,7 +27,7 @@ body{
     text-decoration: none;
 }
 
-.container{
+.movie-container{
     position: absolute;
     top: 0;
     left: 0;
