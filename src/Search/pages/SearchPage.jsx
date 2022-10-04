@@ -24,6 +24,15 @@ export const SearchPage = () => {
 
   }
   
+  //! CLEAR INPUT
+
+  const clearInputSearch = ( e ) => {
+
+    setInputValue( '' );
+    navigate(``)
+
+
+  }
 
   //? NEW
 
@@ -63,7 +72,7 @@ export const SearchPage = () => {
             </form>
 
             <div className="x-icon-searchpage">
-              <i class='bx bx-x'></i>
+              <i class='bx bx-x' onClick={ clearInputSearch }></i>
             </div>
 
           </div>
