@@ -16,13 +16,13 @@ export const SearchPage = () => {
   const [inputValue, setInputValue] = useState(q)
 
   
-    //! INPUT
-    const handleInputChange = ( e ) => {
-  
-      setInputValue( e.target.value );
-      navigate(`?q=${ e.target.value.toLocaleLowerCase().trim() }`)
+  //! INPUT
+  const handleInputChange = ( e ) => {
 
-    }
+    setInputValue( e.target.value );
+    navigate(`?q=${ e.target.value.toLocaleLowerCase().trim() }`)
+
+  }
   
 
   //? NEW
@@ -48,6 +48,7 @@ export const SearchPage = () => {
           <div className="input-container">
 
             <i className='bx bxs-search-alt-2'></i>
+            
             <form onSubmit={ handleSubmit }>
               <input 
                 type="text"
@@ -57,7 +58,6 @@ export const SearchPage = () => {
                 value={ inputValue }
                 autoComplete="off"
               />
-              
             </form>
 
           </div>

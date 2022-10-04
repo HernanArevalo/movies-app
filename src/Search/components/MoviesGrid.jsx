@@ -11,12 +11,12 @@ export const MoviesGrid = ( {inputValue} ) => {
 
   return (
     <>
-
         {loading? 
         <span></span>:
         movies.map(movie =>(
           <Link to={`/movie/${movie.id}`} key={ movie.id } >
-            <div  className='movie-list-item animate__animated animate__fadeIn animate__delay-1s' 
+            <div  className='movie-list-item 
+                             animate__animated animate__fadeIn animate__delay-1s' 
                   style= { movie.image_path != null ? 
                           { backgroundImage: `url(${movie.image})`}: (
                             movie.poster_path != null? 
@@ -24,11 +24,12 @@ export const MoviesGrid = ( {inputValue} ) => {
                             { backgroundImage: `url()`})
                           }
             >
-                <div className='text-movie-list-item'>
-                <span>{movie.title}</span>
-                <span>{movie.year}</span>
 
+                <div className='text-movie-list-item'>
+                  <span className='movie-grid-title'>{movie.title}</span>
+                  <span className='movie-grid-year'>{movie.year}</span>
                 </div>
+
             </div>
           </Link>
           ))
