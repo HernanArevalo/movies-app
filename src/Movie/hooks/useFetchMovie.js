@@ -3,6 +3,7 @@ import { getMovieById } from "../helpers/getMovieById";
 
 export const useFetchMovie = ( id ) => {
 
+
     const [state, setState] = useState({});
 
     useLayoutEffect(()=>{

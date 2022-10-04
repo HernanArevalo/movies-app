@@ -1,15 +1,20 @@
 import { useState } from 'react'
+import { useDispatch} from 'react-redux'
 import { Link, useLocation, useParams, Navigate } from 'react-router-dom'
 import { useFetchMovie } from "../hooks/useFetchMovie"
 import { TrailerComponent } from '../components/TrailerComponent'
 
 import './MoviePage.css'
+import { getMovie } from '../../store/movie/thunks'
 
 
 export const MoviePage = () => {
     
+    const dispatch = useDispatch()
+
     const { movieId, ...rest } = useParams();
-    
+
+    dispatch( getMovie() );
 
     const location = useLocation();
 
