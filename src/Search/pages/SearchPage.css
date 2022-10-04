@@ -54,25 +54,42 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
 }
 
-.input-container i {
-    color: black;
-    font-size: 25px;
-    padding-right: 10px;
-}
 
 .input-container input{
-    width: 140px;
+    width: 200px;
     font-weight: 20px;
     font-family: Aktifo-B;
     font-size: 20px;
     background-color: transparent;
     border: none;
+    height: 50px;
 
 
 }
 
+.search-icon-searchpage, .x-icon-searchpage{
+    height: 100%;
+    color: #000;
+    background-color: none;
+    width: 50px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.x-icon-searchpage i{
+    cursor: pointer;
+
+}
+
+.search-icon-searchpage i, .x-icon-searchpage i {
+    margin: auto;
+
+}
 .input-container input:focus{
     outline: none;
 

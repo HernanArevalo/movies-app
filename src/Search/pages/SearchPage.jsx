@@ -47,7 +47,9 @@ export const SearchPage = () => {
 
           <div className="input-container">
 
-            <i className='bx bxs-search-alt-2'></i>
+            <div className="search-icon-searchpage">
+              <i className='bx bxs-search-alt-2'></i>
+            </div>
             
             <form onSubmit={ handleSubmit }>
               <input 
@@ -59,6 +61,10 @@ export const SearchPage = () => {
                 autoComplete="off"
               />
             </form>
+
+            <div className="x-icon-searchpage">
+              <i class='bx bx-x'></i>
+            </div>
 
           </div>
         </div>
