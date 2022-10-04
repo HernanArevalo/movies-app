@@ -32,10 +32,15 @@ export const MoviePage = () => {
                 
                 <div className="upper-container">
 
+                
+
                     <div className="title animate__animated animate__fadeInRight">
                         <h3>{ movie.title?.toUpperCase() }</h3>
                     </div>
 
+                    <div className="tagline-container animate__animated animate__slideInLeft">
+                        <h4>{ movie?.tagline }</h4>
+                    </div>
 
                     <div className="info-container animate__animated animate__fadeInRight">
 
@@ -57,7 +62,7 @@ export const MoviePage = () => {
                         <div className="directing-title">
                             <h4>Directing</h4> 
                         </div>
-                        <div className="directing-content animate__animated animate__fadeInRight">
+                        <div className="director animate__animated animate__fadeInRight">
                             <p> 
                                 { movie.director }
                             </p>
@@ -79,10 +84,6 @@ export const MoviePage = () => {
 
                 </div>
 
-                <div className="tagline-container animate__animated animate__slideInLeft">
-                    <h4>{ movie?.tagline }</h4>
-                </div>
-
                 <footer className="animate__animated animate__fadeInUp">
                     {movie.actor1}          |          {movie.actor2}          |          {movie.actor3}
                 </footer>
@@ -94,7 +95,6 @@ export const MoviePage = () => {
                 <TrailerComponent 
                               trailer={ movie.trailer }
                               id={ movie.id }/>
-
             }
 
 
