@@ -38,10 +38,6 @@ export const MoviePage = () => {
                         <h3>{ movie.title?.toUpperCase() }</h3>
                     </div>
 
-                    <div className="tagline-container animate__animated animate__slideInLeft">
-                        <h4>{ movie?.tagline }</h4>
-                    </div>
-
                     <div className="info-container animate__animated animate__fadeInRight">
 
                         <div className="year-genders animate__animated animate__fadeInRight">
@@ -80,6 +76,10 @@ export const MoviePage = () => {
                             </Link>
                         </div>
 
+                    </div>
+                    
+                    <div className="tagline-container animate__animated animate__slideInLeft">
+                        <h4>{ movie?.tagline }</h4>
                     </div>
 
                 </div>
