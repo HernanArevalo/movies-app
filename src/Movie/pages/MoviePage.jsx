@@ -84,8 +84,11 @@ export const MoviePage = () => {
 
                 </div>
 
-                <footer className="animate__animated animate__fadeInUp">
-                    {movie.actor1}          |          {movie.actor2}          |          {movie.actor3}
+                <footer className="footer animate__animated animate__fadeInUp">
+                    <div className='footer'>
+                        {movie.actor1}          |          {movie.actor2}          |          {movie.actor3}
+
+                    </div>
                 </footer>
 
 
