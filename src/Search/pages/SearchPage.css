@@ -22,13 +22,11 @@
 }
 
 .search-head{
-    padding-left: 30px;
-    padding-top: 30px;
+    padding: 30px;
     z-index: 10;
     position: sticky;
     top: 0;
     background: linear-gradient(180deg, rgba(0,0,0,0.5) 70%, rgba(0,255,0,0) 100%);
-    height: 200px;
 }
 
 .search-h3{
@@ -146,7 +144,16 @@ a{
     }
 }
 
-@media only screen and (max-width: 500) {
+@media only screen and (max-width: 400px) {
+    .input-container{
+        width: 100%;
+        margin: 0;
+    }
 
-
+    .search-icon-searchpage, .x-icon-searchpage{
+        width: 20%;
+    }
+    .input-container form{
+        width: 60%;
+    }
 }
