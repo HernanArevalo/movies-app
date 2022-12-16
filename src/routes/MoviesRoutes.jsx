@@ -17,7 +17,7 @@ export const MoviesRoutes = () => {
                            element={<MoviePage />} />
 
                     <Route path="/" 
-                           element={<Navigate to="movie/22" />} />
+                           element={<Navigate to="search" />} />
 
                 </Routes>
             </div>
