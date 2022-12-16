@@ -1,4 +1,4 @@
-@charset "UTF-8";body{background-color:#111;font-family:Aktifo-B;padding:0;margin:0}@font-face{font-family:Aktifo-B-Black;src:url(./assets/fonts/Aktifo-B-Black)}@font-face{font-family:Aktifo-B-Bold;src:url(./assets/fonts/Aktifo-B-Bold)}/*!
+@charset "UTF-8";.intro{position:fixed;z-index:100;left:0;top:0;color:#fff;width:100%;height:100vh;background-color:#161616;transition:1s}.logo-header{position:absolute;top:40%;left:50%;transform:translate(-50%,-50%)}.logo{position:relative;display:inline-block;bottom:-20px;opacity:0}.logo.active{bottom:0;opacity:1;transition:ease-in-out .5s}.logo.fade{bottom:150px;opacity:0;transition:ease-in-out .5s}body{background-color:#111;font-family:Aktifo-B;padding:0;margin:0}@font-face{font-family:Aktifo-B-Black;src:url(./assets/fonts/Aktifo-B-Black)}@font-face{font-family:Aktifo-B-Bold;src:url(./assets/fonts/Aktifo-B-Bold)}/*!
  * animate.css - https://animate.style/
  * Version - 4.1.1
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
