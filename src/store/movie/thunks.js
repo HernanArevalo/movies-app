@@ -1,6 +1,6 @@
 import { savingMovie, setMovie } from './movieSlice'
 import { useParams } from 'react-router-dom'
-import { useFetchMovie } from '../../Movie/hooks/useFetchMovie'
+import { useFetchMovie } from '../../pages/Movie/hooks/useFetchMovie';
 
 
 export const getMovie = (  ) => {

@@ -72,7 +72,7 @@ export const SearchPage = () => {
             </form>
 
             <div className="x-icon-searchpage">
-              <i class='bx bx-x' onClick={ clearInputSearch }></i>
+              <i className='bx bx-x' onClick={ clearInputSearch }></i>
             </div>
 
           </div>

@@ -5,7 +5,7 @@ import { useFetchMovie } from "../hooks/useFetchMovie"
 import { TrailerComponent } from '../components/TrailerComponent'
 
 import './MoviePage.css'
-import { getMovie } from '../../store/movie/thunks'
+import { getMovie } from '../../../store/movie/thunks'
 
 
 export const MoviePage = () => {
